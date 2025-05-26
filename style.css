@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #6a0572, #9d50bb);
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #00000066;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.frame {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  width: 260px;
+}
+
+.frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.frame:hover {
+  transform: scale(1.05);
+}
+
+/* Decorative Blue Roses */
+.rose {
+  position: absolute;
+  width: 80px;
+  opacity: 0.3;
+  animation: float 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+.rose1 { top: 10%; left: 5%; animation-delay: 0s; }
+.rose2 { top: 30%; right: 5%; animation-delay: 2s; }
+.rose3 { bottom: 10%; left: 50%; animation-delay: 4s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
