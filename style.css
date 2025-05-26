@@ -17,29 +17,51 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Gallery Layout */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
+/* Frame and image styling */
 .frame {
-  width: 90%;
-  max-width: 300px;
-  border: 4px solid #d39bd3;
   border-radius: 12px;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  float: left;
 }
 
 .frame img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  border: 4px solid #d39bd3;
+  border-radius: 12px;
 }
 
+/* Optional: Floating hover animation */
+.frame:hover {
+  transform: scale(1.05);
+}
+
+/* Make sure they don't overflow on mobile */
+@media (max-width: 600px) {
+  .frame {
+    width: 90%;
+  }
+}
+
+@media (min-width: 601px) {
+  .frame {
+    width: 250px;
+  }
+}
+
+/* Rose decorative elements */
 .rose {
   position: absolute;
   width: 50px;
@@ -49,13 +71,3 @@ h1 {
 .rose1 { top: 10px; left: 10px; }
 .rose2 { bottom: 10px; right: 10px; }
 .rose3 { top: 10px; right: 10px; }
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  .rose {
-    width: 35px;
-    opacity: 0.2;
-  }
-}
